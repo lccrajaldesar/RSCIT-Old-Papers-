@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RS-CIT Practice Mock Test – 35 Questions</title>
+<meta name="description" content="RS-CIT Practice Mock Test: 35 questions, 60 minutes, instant result and complete answer review.">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:#f4f7fb;color:#172033;font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif}
+header{background:linear-gradient(135deg,#173b8f,#2563eb);color:#fff;padding:16px 18px;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px rgba(0,0,0,.14)}
+.head{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.title{font-size:22px;font-weight:800}
+.sub{font-size:13px;opacity:.92;margin-top:4px}
+.timer{background:#fff;color:#b42318;padding:9px 14px;border-radius:12px;font-size:20px;font-weight:900;min-width:84px;text-align:center}
+.wrap{max-width:1100px;margin:18px auto;padding:0 14px}
+.bar,.card{background:#fff;border-radius:16px;box-shadow:0 4px 18px rgba(29,53,87,.10)}
+.bar{padding:15px;margin-bottom:16px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:14px}
+.progress{height:8px;background:#e7edf7;border-radius:20px;margin-top:10px;overflow:hidden}
+.progress i{display:block;height:100%;width:0;background:#2563eb}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:16px}
+.card{padding:22px}
+.qno{color:#2563eb;font-weight:800}
+.question{font-size:20px;line-height:1.65;font-weight:700;margin:9px 0 18px}
+.opt{display:flex;align-items:flex-start;gap:9px;border:1px solid #dce4f0;border-radius:12px;padding:13px;margin:9px 0;cursor:pointer;position:relative;background:#fff}
+.opt:hover{border-color:#2563eb;background:#f5f8ff}
+.opt input{accent-color:#2563eb;margin-top:4px;flex:0 0 auto}
+.opt-text{flex:1;line-height:1.65}
+.opt.selected{border:2px solid #16a34a;background:#f0fdf4;box-shadow:0 0 0 2px #bbf7d0}
+.right-mark{display:none;flex:0 0 auto;min-width:31px;height:31px;border-radius:50%;background:#16a34a;color:#fff;font-size:21px;font-weight:900;text-align:center;line-height:31px;margin-left:auto}
+.opt.selected .right-mark{display:block}
+.actions{display:flex;justify-content:space-between;margin-top:22px;gap:10px}
+.btn{border:0;border-radius:10px;padding:11px 18px;font-weight:800;cursor:pointer;font-family:inherit}
+.prev{background:#eef2f7;color:#172033}.next{background:#2563eb;color:#fff}
+.submit{background:#b42318;color:#fff;width:100%;margin-top:16px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.palette{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.p{height:38px;border:1px solid #dbe3ef;border-radius:8px;background:#f8fafc;font-weight:700;cursor:pointer}
+.p.cur{outline:3px solid #93c5fd}
+.p.done{background:#dcfce7;color:#166534;border-color:#86efac}
+.legend{font-size:12px;color:#64748b;line-height:1.8;margin-top:12px}
+.result{display:none}
+.score{text-align:center;font-size:38px;font-weight:900;color:#2563eb}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stat{background:#f7f9fc;border-radius:12px;text-align:center;padding:14px}
+.stat b{font-size:25px;display:block}
+.result-note{margin-top:20px;padding:15px;border-radius:12px;background:#eff6ff;text-align:center;line-height:1.6}
+.review-title{margin-top:28px;border-bottom:2px solid #e5e7eb;padding-bottom:10px}
+.review-item{border:1px solid #dce4f0;border-radius:14px;margin:12px 0;padding:16px;background:#fff}
+.review-q{font-weight:800;line-height:1.6;margin-bottom:10px}
+.answer-line{padding:8px 10px;border-radius:8px;margin:6px 0;line-height:1.55}
+.answer-user{background:#f8fafc}
+.answer-correct{background:#ecfdf3;color:#166534}
+.status{display:inline-block;padding:4px 9px;border-radius:999px;font-size:12px;font-weight:800;margin-bottom:8px}
+.status-ok{background:#dcfce7;color:#166534}.status-no{background:#fee2e2;color:#991b1b}.status-skip{background:#e5e7eb;color:#374151}
+.other-tests{margin-top:24px}
+.test-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+.test-link{display:block;text-decoration:none;color:inherit;border:1px solid #dbe3ef;border-radius:13px;padding:15px;background:#fff}
+.test-link:hover{border-color:#2563eb;box-shadow:0 3px 12px rgba(37,99,235,.10)}
+.test-link b{display:block;color:#173b8f;margin-bottom:5px}.test-link span{font-size:13px;color:#64748b;line-height:1.5}
+@media(max-width:800px){.layout{grid-template-columns:1fr}.sidebar{order:-1}.question{font-size:18px}.stats{grid-template-columns:repeat(2,1fr)}.title{font-size:18px}.test-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.head{align-items:flex-start}.timer{font-size:18px;padding:8px 10px}.card{padding:16px}.opt{padding:11px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head">
+    <div>
+      <div class="title">RS-CIT Practice Mock Test</div>
+      <div class="sub">Original Practice Questions • 35 प्रश्न • 60 मिनट</div>
+    </div>
+    <div class="timer" id="timer">60:00</div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="bar">
+    <div class="row">
+      <b><span id="ptNum">1</span> <span> / 35</span></b>
+      <span>हल किए: <span id="attemptedNum">0</span> / 35</span>
+    </div>
+    <div class="progress"><i id="pb"></i></div>
+  </div>
+
+  <div class="layout" id="quizLayout">
+    <section class="card" id="quizCard">
+      <div id="quiz"></div>
+
+      <div class="actions">
+        <button class="btn prev" id="prev" type="button">← पिछला</button>
+        <button class="btn next" id="next" type="button">अगला →</button>
+      </div>
+    </section>
+
+    <aside class="card sidebar">
+      <b>प्रश्न सूची</b>
+      <div class="palette" id="palette" style="margin-top:12px"></div>
+      <div class="legend">
+        🟩 हल किया हुआ<br>
+        🔵 वर्तमान प्रश्न<br>
+        ⬜ बाकी
+      </div>
+      <button class="btn submit" id="submit" type="button">टेस्ट जमा करें</button>
+    </aside>
+  </div>
+
+  <section class="card result" id="result"></section>
+</main>
+
+<script>
+/*
+ VERSION 6 — BLOGGER SAFE ARCHITECTURE
+
+ IMPORTANT:
+ - Hindi UI labels are literal HTML, NOT JavaScript strings.
+ - JavaScript changes only numbers/state.
+ - No window.scrollTo(), focus(), or smooth scrolling is used.
+ - The current browser scroll position is preserved during navigation.
+ - Questions/options are decoded and inserted with textContent.
+*/
+
+const Q=[{"q": "कंप्यूटर में डेटा को स्थायी रूप से सुरक्षित रखने के लिए सामान्यतः किस उपकरण का उपयोग किया जाता है?", "options": ["RAM", "Hard Disk/SSD", "Cache", "Register"], "answer": 1}, {"q": "CPU का मुख्य कार्य क्या है?", "options": ["केवल चित्र दिखाना", "निर्देशों को संसाधित करना", "कागज प्रिंट करना", "इंटरनेट कनेक्शन देना"], "answer": 1}, {"q": "RAM की विशेषता क्या है?", "options": ["यह केवल पढ़ने के लिए होती है", "बिजली बंद होने पर इसमें रखा कार्यशील डेटा सामान्यतः समाप्त हो जाता है", "यह केवल प्रिंटर में होती है", "यह इंटरनेट की गति बढ़ाती है"], "answer": 1}, {"q": "निम्न में से कौन-सा Input Device है?", "options": ["Monitor", "Speaker", "Keyboard", "Projector"], "answer": 2}, {"q": "निम्न में से कौन-सा Output Device है?", "options": ["Mouse", "Keyboard", "Scanner", "Monitor"], "answer": 3}, {"q": "Operating System का प्रमुख कार्य क्या है?", "options": ["केवल वीडियो चलाना", "हार्डवेयर और सॉफ्टवेयर संसाधनों का प्रबंधन करना", "केवल दस्तावेज प्रिंट करना", "केवल वेबसाइट बनाना"], "answer": 1}, {"q": "Windows में किसी फाइल को अस्थायी रूप से हटाने पर वह सामान्यतः कहाँ जाती है?", "options": ["Control Panel", "Recycle Bin", "Taskbar", "Desktop"], "answer": 1}, {"q": "Windows File Explorer का उपयोग मुख्यतः किस लिए किया जाता है?", "options": ["फाइल और फोल्डर प्रबंधित करने के लिए", "वीडियो रिकॉर्ड करने के लिए", "ईमेल भेजने के लिए", "वेब सर्वर बनाने के लिए"], "answer": 0}, {"q": "MS Word का मुख्य उपयोग किस प्रकार के कार्य के लिए होता है?", "options": ["दस्तावेज तैयार करने के लिए", "ऑडियो रिकॉर्ड करने के लिए", "ऑपरेटिंग सिस्टम स्थापित करने के लिए", "नेटवर्क केबल बनाने के लिए"], "answer": 0}, {"q": "MS Word में किसी शब्द को मोटा (Bold) करने के लिए सामान्य shortcut क्या है?", "options": ["Ctrl+B", "Ctrl+P", "Ctrl+L", "Ctrl+K"], "answer": 0}, {"q": "MS Word में पेज के चारों ओर खाली स्थान को क्या कहा जाता है?", "options": ["Margin", "Formula", "Slide", "Cell"], "answer": 0}, {"q": "MS Word में किसी वेबसाइट या अन्य स्थान का क्लिक करने योग्य लिंक जोड़ने के लिए किस सुविधा का उपयोग किया जाता है?", "options": ["Hyperlink", "Spell Check", "Header", "Word Count"], "answer": 0}, {"q": "MS Excel में एक खाने को क्या कहा जाता है?", "options": ["Slide", "Cell", "Page", "Frame"], "answer": 1}, {"q": "Excel में पंक्तियों को सामान्यतः किससे पहचाना जाता है?", "options": ["अक्षरों से", "संख्याओं से", "रंगों से", "चित्रों से"], "answer": 1}, {"q": "Excel में कॉलम और Row के मिलन से क्या बनता है?", "options": ["Cell", "Chart", "Workbook", "Menu"], "answer": 0}, {"q": "Excel में गणना करने के लिए Formula सामान्यतः किस चिन्ह से शुरू होता है?", "options": ["#", "=", "@", "&"], "answer": 1}, {"q": "Excel में कई Worksheets का संग्रह क्या कहलाता है?", "options": ["Workbook", "Browser", "Database Driver", "Slide Show"], "answer": 0}, {"q": "Excel में डेटा को ग्राफ के रूप में दिखाने के लिए किसका उपयोग किया जाता है?", "options": ["Chart", "Footer", "Clipboard", "Recycle Bin"], "answer": 0}, {"q": "Excel में वर्तमान दिनांक और समय प्राप्त करने के लिए कौन-सा function उपयोगी है?", "options": ["NOW()", "SUM()", "LEFT()", "COUNTIF()"], "answer": 0}, {"q": "PowerPoint का मुख्य उद्देश्य क्या है?", "options": ["Presentation बनाना", "Operating System चलाना", "Hard Disk format करना", "Email server बनाना"], "answer": 0}, {"q": "PowerPoint की एक Presentation सामान्यतः किससे बनी होती है?", "options": ["Slides", "Cells", "Rows", "Folders"], "answer": 0}, {"q": "Internet पर किसी वेब पेज का पता किस नाम से जाना जाता है?", "options": ["URL", "CPU", "RAM", "USB"], "answer": 0}, {"q": "HTTPS में S मुख्यतः किस बात का संकेत देता है?", "options": ["Secure connection", "System memory", "Screen resolution", "Search result"], "answer": 0}, {"q": "Internet पर जानकारी खोजने के लिए किसका उपयोग किया जाता है?", "options": ["Search Engine", "Calculator", "Paint", "File Explorer"], "answer": 0}, {"q": "निम्न में से कौन-सा Web Browser है?", "options": ["Chrome", "Excel", "PowerPoint", "Notepad"], "answer": 0}, {"q": "ईमेल में Bcc का उपयोग किस स्थिति में उपयोगी है?", "options": ["प्राप्तकर्ताओं के पते अन्य प्राप्तकर्ताओं से छिपाने के लिए", "फाइल को compress करने के लिए", "ईमेल को print करने के लिए", "पासवर्ड बदलने के लिए"], "answer": 0}, {"q": "OTP का पूरा नाम क्या है?", "options": ["One Time Password", "Online Transfer Process", "Open Text Program", "Official Test Portal"], "answer": 0}, {"q": "किसी अनजान लिंक पर क्लिक करने से पहले सबसे उचित कदम क्या है?", "options": ["लिंक और स्रोत की विश्वसनीयता जाँचें", "तुरंत पासवर्ड डालें", "लिंक सभी को भेजें", "Antivirus बंद कर दें"], "answer": 0}, {"q": "Phishing का सामान्य उद्देश्य क्या होता है?", "options": ["धोखे से संवेदनशील जानकारी प्राप्त करना", "कंप्यूटर की स्क्रीन साफ करना", "प्रिंटर की गति बढ़ाना", "फाइल का आकार घटाना"], "answer": 0}, {"q": "मजबूत पासवर्ड की एक अच्छी विशेषता क्या है?", "options": ["केवल अपना नाम होना", "लंबा और विभिन्न प्रकार के characters का मिश्रण होना", "सिर्फ 123456 होना", "सभी वेबसाइट पर एक ही होना"], "answer": 1}, {"q": "Digital Payment करते समय OTP किसे बताना चाहिए?", "options": ["किसी भी caller को", "केवल मित्र को", "किसी को नहीं; OTP निजी सुरक्षा जानकारी है", "सोशल मीडिया पर"], "answer": 2}, {"q": "UPI का उपयोग मुख्यतः किस लिए किया जाता है?", "options": ["डिजिटल भुगतान के लिए", "फोटो एडिटिंग के लिए", "दस्तावेज टाइप करने के लिए", "प्रिंटर सेटअप के लिए"], "answer": 0}, {"q": "e-Governance का अर्थ क्या है?", "options": ["सरकारी सेवाओं को डिजिटल माध्यमों से उपलब्ध कराना", "केवल गेम खेलना", "कंप्यूटर बेचना", "मोबाइल की battery बदलना"], "answer": 0}, {"q": "Cloud Storage का उपयोग किस लिए किया जा सकता है?", "options": ["फाइलों को ऑनलाइन संग्रहित और access करने के लिए", "केवल keyboard साफ करने के लिए", "CPU की physical speed बदलने के लिए", "Printer ink भरने के लिए"], "answer": 0}, {"q": "किसी सार्वजनिक Wi-Fi पर संवेदनशील banking कार्य करते समय सबसे उचित सावधानी क्या है?", "options": ["सुरक्षित और विश्वसनीय नेटवर्क का उपयोग करना", "हर security warning को ignore करना", "OTP दूसरों को देना", "पासवर्ड को सार्वजनिक रूप से लिखना"], "answer": 0}];
+
+/* आगे नए Mock Tests जोड़ने के लिए सिर्फ इस list को edit करें. */
+const MOCK_TESTS=[
+ {title:"RS-CIT Practice Mock Test – 35 Questions",url:"#",desc:"\u0935\u0930\u094d\u0924\u092e\u093e\u0928 Practice Test \u2022 35 \u092a\u094d\u0930\u0936\u094d\u0928 \u2022 60 \u092e\u093f\u0928\u091f"},
+ {title:"RS-CIT Chapter 1 – Computer Fundamentals",url:"#",desc:"Computer Fundamentals \u0915\u093e Practice Test"},
+ {title:"RS-CIT MS Word Practice Test",url:"#",desc:"MS Word \u0915\u0947 \u092e\u0939\u0924\u094d\u0935\u092a\u0942\u0930\u094d\u0923 MCQ \u092a\u094d\u0930\u0936\u094d\u0928"},
+ {title:"RS-CIT MS Excel Practice Test",url:"#",desc:"MS Excel \u0906\u0927\u093e\u0930\u093f\u0924 Practice Questions"},
+ {title:"RS-CIT Internet & Cyber Security Test",url:"#",desc:"Internet, Email \u0914\u0930 Cyber Security MCQs"},
+ {title:"RS-CIT Digital Services Practice Test",url:"#",desc:"Digital Payment \u0914\u0930 e-Governance Questions"}
+];
+
+let cur=0;
+let A=Array(Q.length).fill(null);
+let left=3600;
+let done=false;
+let clock=null;
+
+const $=id=>document.getElementById(id);
+
+function decodeHTML(value){
+  let s=String(value??"");
+  for(let i=0;i<6;i++){
+    const ta=document.createElement("textarea");
+    ta.innerHTML=s;
+    const d=ta.value;
+    if(d===s) break;
+    s=d;
+  }
+  return s;
+}
+
+function makeEl(tag,cls,text){
+  const el=document.createElement(tag);
+  if(cls) el.className=cls;
+  if(text!==undefined) el.textContent=decodeHTML(text);
+  return el;
+}
+
+/* Save/restore only the browser's own scroll position; never force-scroll. */
+function preserveScroll(fn){
+  const x=window.scrollX;
+  const y=window.scrollY;
+  fn();
+  if(window.scrollX!==x || window.scrollY!==y){
+    window.scrollTo(x,y);
+  }
+}
+
+function render(){
+  const q=Q[cur];
+
+  $("ptNum").textContent=String(cur+1);
+  $("attemptedNum").textContent=String(A.filter(x=>x!==null).length);
+  $("pb").style.width=((cur+1)/Q.length*100)+"%";
+
+  const quiz=$("quiz");
+  quiz.replaceChildren();
+
+  quiz.appendChild(makeEl("div","qno","\u092a\u094d\u0930\u0936\u094d\u0928 "+(cur+1)));
+  quiz.appendChild(makeEl("div","question",q.q));
+
+  q.options.forEach((optionText,i)=>{
+    const label=makeEl("label","opt");
+    if(A[cur]===i) label.classList.add("selected");
+
+    const radio=document.createElement("input");
+    radio.type="radio";
+    radio.name="answer";
+    radio.value=String(i);
+    radio.checked=(A[cur]===i);
+
+    const span=makeEl("span","opt-text");
+    const letter=document.createElement("b");
+    letter.textContent=String.fromCharCode(65+i)+". ";
+    span.appendChild(letter);
+    span.appendChild(document.createTextNode(decodeHTML(optionText)));
+
+    const mark=makeEl("span","right-mark","✓");
+    mark.title="RIGHT";
+    mark.setAttribute("aria-label","RIGHT");
+
+    label.appendChild(radio);
+    label.appendChild(span);
+    label.appendChild(mark);
+
+    radio.addEventListener("change",()=>{
+      A[cur]=i;
+      preserveScroll(render);
+    });
+
+    quiz.appendChild(label);
+  });
+
+  $("prev").disabled=(cur===0);
+  $("next").textContent=(cur===Q.length-1)?"\u0905\u0902\u0924\u093f\u092e \u092a\u094d\u0930\u0936\u094d\u0928":"\u0905\u0917\u0932\u093e \u2192";
+
+  const palette=$("palette");
+  palette.replaceChildren();
+
+  Q.forEach((_,i)=>{
+    const b=makeEl("button","p",String(i+1));
+    b.type="button";
+    if(i===cur) b.classList.add("cur");
+    if(A[i]!==null) b.classList.add("done");
+    b.addEventListener("click",()=>go(i));
+    palette.appendChild(b);
+  });
+}
+
+function go(i){
+  if(done||i<0||i>=Q.length) return;
+  preserveScroll(()=>{
+    cur=i;
+    render();
+  });
+}
+
+$("prev").addEventListener("click",()=>go(cur-1));
+$("next").addEventListener("click",()=>cur<Q.length-1?go(cur+1):ask());
+$("submit").addEventListener("click",ask);
+
+function ask(){
+  if(!done && confirm("\u0915\u094d\u092f\u093e \u0906\u092a \u091f\u0947\u0938\u094d\u091f \u091c\u092e\u093e \u0915\u0930\u0928\u093e \u091a\u093e\u0939\u0924\u0947 \u0939\u0948\u0902?")) finish(false);
+}
+
+function finish(auto){
+  if(done) return;
+  done=true;
+  if(clock) clearInterval(clock);
+
+  const c=A.reduce((n,a,i)=>n+(a===Q[i].answer?1:0),0);
+  const attempted=A.filter(x=>x!==null).length;
+  const wrong=attempted-c;
+  const unattempted=Q.length-attempted;
+  const p=(c/Q.length*100).toFixed(2);
+
+  $("quizLayout").style.display="none";
+
+  const result=$("result");
+  result.style.display="block";
+  result.replaceChildren();
+
+  result.appendChild(makeEl("h2","",auto?"\u23f0 \u0938\u092e\u092f \u0938\u092e\u093e\u092a\u094d\u0924 \u2014 \u091f\u0947\u0938\u094d\u091f \u0938\u094d\u0935\u0924\u0903 \u091c\u092e\u093e \u0939\u094b \u0917\u092f\u093e":"\ud83c\udf89 \u091f\u0947\u0938\u094d\u091f \u092a\u0942\u0930\u093e \u0939\u0941\u0906"));
+  result.appendChild(makeEl("div","score",c+" / "+Q.length));
+
+  const perc=document.createElement("p");
+  perc.style.textAlign="center";
+  const percB=document.createElement("b");
+  percB.textContent="Percentage: "+p+"%";
+  perc.appendChild(percB);
+  result.appendChild(perc);
+
+  const stats=makeEl("div","stats");
+  [
+    ["Attempted",attempted],
+    ["Correct",c],
+    ["Wrong",wrong],
+    ["Unattempted",unattempted]
+  ].forEach(([label,value])=>{
+    const box=makeEl("div","stat");
+    box.appendChild(makeEl("b","",String(value)));
+    box.appendChild(document.createTextNode(label));
+    stats.appendChild(box);
+  });
+  result.appendChild(stats);
+
+  result.appendChild(makeEl(
+    "div","result-note",
+    "\u2713 \u0906\u092a\u0915\u0947 \u091a\u0941\u0928\u0947 \u0939\u0941\u090f \u0935\u093f\u0915\u0932\u094d\u092a \u092a\u0930 \u0939\u0930\u093e RIGHT \u091a\u093f\u0928\u094d\u0939 \u0926\u093f\u0916\u093e\u0908 \u0926\u0947\u0924\u093e \u0939\u0948\u0964 \u0928\u0940\u091a\u0947 \u0938\u092d\u0940 35 \u092a\u094d\u0930\u0936\u094d\u0928\u094b\u0902 \u0915\u093e Answer Review \u0926\u093f\u092f\u093e \u0917\u092f\u093e \u0939\u0948\u0964"
+  ));
+
+  result.appendChild(makeEl("h2","review-title","\ud83d\udccb Answer Review \u2014 \u092a\u094d\u0930\u0936\u094d\u0928\u0935\u093e\u0930 \u0909\u0924\u094d\u0924\u0930"));
+
+  const review=document.createElement("div");
+
+  Q.forEach((q,i)=>{
+    const item=makeEl("div","review-item");
+    item.appendChild(makeEl("div","review-q",(i+1)+". "+q.q));
+
+    const selected=A[i];
+    const correct=q.answer;
+
+    if(selected===null){
+      item.appendChild(makeEl("span","status status-skip","\u091b\u094b\u0921\u093c\u093e \u0939\u0941\u0906"));
+    }else if(selected===correct){
+      item.appendChild(makeEl("span","status status-ok","\u2713 \u0938\u0939\u0940"));
+    }else{
+      item.appendChild(makeEl("span","status status-no","\u2717 \u0917\u0932\u0924"));
+    }
+
+    const userText=selected===null
+      ?"\u0915\u094b\u0908 \u0909\u0924\u094d\u0924\u0930 \u0928\u0939\u0940\u0902 \u091a\u0941\u0928\u093e"
+      :String.fromCharCode(65+selected)+". "+q.options[selected];
+
+    const correctText=String.fromCharCode(65+correct)+". "+q.options[correct];
+
+    item.appendChild(makeEl("div","answer-line answer-user","\u0906\u092a\u0915\u093e \u0909\u0924\u094d\u0924\u0930: "+userText));
+    item.appendChild(makeEl("div","answer-line answer-correct","\u0938\u0939\u0940 \u0909\u0924\u094d\u0924\u0930: "+correctText));
+
+    review.appendChild(item);
+  });
+
+  result.appendChild(review);
+
+  const other=makeEl("div","other-tests");
+  other.appendChild(makeEl("h2","","\ud83d\udcda \u0905\u0928\u094d\u092f Mock Tests"));
+  other.appendChild(makeEl(
+    "p","","\u0906\u0917\u0947 \u0928\u090f Mock Tests \u091c\u094b\u0921\u093c\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f MOCK_TESTS \u0938\u0942\u091a\u0940 \u092e\u0947\u0902 \u0928\u093e\u092e, URL \u0914\u0930 \u0935\u093f\u0935\u0930\u0923 \u092c\u0926\u0932\u0947\u0902\u0964"
+  ));
+
+  const grid=makeEl("div","test-grid");
+
+  MOCK_TESTS.forEach(t=>{
+    const a=document.createElement("a");
+    a.className="test-link";
+    a.href=t.url;
+    if(t.url!=="#"){
+      a.target="_blank";
+      a.rel="noopener";
+    }
+    a.appendChild(makeEl("b","",t.title));
+    a.appendChild(makeEl("span","",t.desc));
+    grid.appendChild(a);
+  });
+
+  other.appendChild(grid);
+  result.appendChild(other);
+
+  const wrap=makeEl("p","");
+  wrap.style.textAlign="center";
+  wrap.style.marginTop="22px";
+
+  const retry=makeEl("button","btn next","↻ Try Again");
+  retry.type="button";
+  retry.addEventListener("click",()=>location.reload());
+
+  wrap.appendChild(retry);
+  result.appendChild(wrap);
+}
+
+function tick(){
+  left--;
+  if(left<0){
+    finish(true);
+    return;
+  }
+  const m=Math.floor(left/60);
+  const s=left%60;
+  $("timer").textContent=String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
+}
+
+render();
+clock=setInterval(tick,1000);
+</script>
+</body>
+</html>
