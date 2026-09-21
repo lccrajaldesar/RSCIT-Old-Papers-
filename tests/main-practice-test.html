@@ -232,8 +232,25 @@ function render(){
   });
 }
 
+function firstUnanswered(){
+  return A.findIndex(x=>x===null);
+}
+
 function go(i){
   if(done||i<0||i>=Q.length) return;
+
+  /* Future unanswered questions cannot be skipped. */
+  if(i>cur && A[cur]===null){
+    alert("\u0915\u0943\u092a\u092f\u093e \u092a\u0939\u0932\u0947 \u0907\u0938 \u092a\u094d\u0930\u0936\u094d\u0928 \u0915\u093e \u0909\u0924\u094d\u0924\u0930 \u091a\u0941\u0928\u0947\u0902\u0964");
+    return;
+  }
+
+  const first=firstUnanswered();
+  if(i>cur && first!==-1 && i>first){
+    alert("\u092a\u0939\u0932\u0947 \u092a\u094d\u0930\u0936\u094d\u0928 \u0915\u094d\u0930\u092e\u093e\u0902\u0915 "+(first+1)+" \u0915\u093e \u0909\u0924\u094d\u0924\u0930 \u0926\u0947\u0902\u0964");
+    return;
+  }
+
   preserveScroll(()=>{
     cur=i;
     render();
@@ -241,11 +258,39 @@ function go(i){
 }
 
 $("prev").addEventListener("click",()=>go(cur-1));
-$("next").addEventListener("click",()=>cur<Q.length-1?go(cur+1):ask());
+
+$("next").addEventListener("click",()=>{
+  if(A[cur]===null){
+    alert("\u0915\u0943\u092a\u092f\u093e \u092a\u0939\u0932\u0947 \u0907\u0938 \u092a\u094d\u0930\u0936\u094d\u0928 \u0915\u093e \u0909\u0924\u094d\u0924\u0930 \u091a\u0941\u0928\u0947\u0902\u0964");
+    return;
+  }
+
+  if(cur<Q.length-1){
+    go(cur+1);
+  }else{
+    ask();
+  }
+});
+
 $("submit").addEventListener("click",ask);
 
 function ask(){
-  if(!done && confirm("\u0915\u094d\u092f\u093e \u0906\u092a \u091f\u0947\u0938\u094d\u091f \u091c\u092e\u093e \u0915\u0930\u0928\u093e \u091a\u093e\u0939\u0924\u0947 \u0939\u0948\u0902?")) finish(false);
+  if(done) return;
+
+  const unanswered=firstUnanswered();
+
+  if(unanswered!==-1){
+    preserveScroll(()=>{
+      cur=unanswered;
+      render();
+    });
+    alert("\u091f\u0947\u0938\u094d\u091f \u091c\u092e\u093e \u0915\u0930\u0928\u0947 \u0938\u0947 \u092a\u0939\u0932\u0947 \u0938\u092d\u0940 35 \u092a\u094d\u0930\u0936\u094d\u0928\u094b\u0902 \u0915\u0947 \u0909\u0924\u094d\u0924\u0930 \u091a\u0941\u0928\u0928\u093e \u0905\u0928\u093f\u0935\u093e\u0930\u094d\u092f \u0939\u0948\u0964\\n\\n\u092a\u094d\u0930\u0936\u094d\u0928 \u0915\u094d\u0930\u092e\u093e\u0902\u0915: "+(unanswered+1));
+    return;
+  }
+
+  if(confirm("\u0915\u094d\u092f\u093e \u0906\u092a \u091f\u0947\u0938\u094d\u091f \u091c\u092e\u093e \u0915\u0930\u0928\u093e \u091a\u093e\u0939\u0924\u0947 \u0939\u0948\u0902?")){
+    finish(false);
+  }
 }
 
 function finish(auto){
