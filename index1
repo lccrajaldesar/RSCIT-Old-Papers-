@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RS-CIT Old Papers & Mock Tests | Ladsaria Computer Center</title>
+<meta name="description" content="RS-CIT Previous Year Papers, Mock Tests and Practice Tests - Ladsaria Computer Center, Rajaldesar.">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif;
+  background:#f4f7fb;color:#172033;
+}
+.hero{
+  background:linear-gradient(135deg,#173b8f,#2563eb 55%,#0ea5e9);
+  color:#fff;padding:42px 18px;
+}
+.hero-inner{max-width:1050px;margin:auto;text-align:center}
+.badge{
+  display:inline-block;background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.25);
+  padding:7px 14px;border-radius:999px;font-size:13px;font-weight:700
+}
+h1{font-size:34px;margin:16px 0 8px}
+.hero p{margin:0;opacity:.94;line-height:1.7}
+.wrap{max-width:1050px;margin:24px auto;padding:0 15px}
+.section-title{font-size:24px;margin:0 0 6px;color:#173b8f}
+.section-sub{color:#64748b;margin:0 0 18px}
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px
+}
+.card{
+  background:#fff;border-radius:18px;padding:20px;
+  box-shadow:0 5px 20px rgba(29,53,87,.10);
+  border:1px solid #e5eaf2;display:flex;flex-direction:column
+}
+.card .icon{font-size:32px}
+.card h2{font-size:19px;margin:12px 0 8px;color:#173b8f;line-height:1.4}
+.card p{font-size:14px;color:#64748b;line-height:1.65;flex:1;margin:0 0 16px}
+.btn{
+  display:block;text-align:center;text-decoration:none;
+  background:#2563eb;color:#fff;padding:11px 14px;
+  border-radius:10px;font-weight:800
+}
+.btn:hover{background:#173b8f}
+.tag{
+  display:inline-block;background:#dcfce7;color:#166534;
+  border-radius:999px;padding:4px 9px;font-size:11px;font-weight:800;
+  margin-top:10px
+}
+.info{
+  margin-top:22px;background:#fff;border-radius:16px;padding:20px;
+  box-shadow:0 4px 16px rgba(29,53,87,.08)
+}
+.info ul{margin:10px 0 0;padding-left:22px;line-height:1.9;color:#475569}
+footer{
+  margin-top:28px;background:#172033;color:#cbd5e1;text-align:center;
+  padding:24px 15px;font-size:13px;line-height:1.7
+}
+footer b{color:#fff}
+@media(max-width:800px){.grid{grid-template-columns:1fr 1fr}h1{font-size:28px}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero{padding:32px 15px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="badge">Ladsaria Computer Center • Rajaldesar</span>
+    <h1>RS-CIT Old Papers & Mock Tests</h1>
+    <p>Previous Exam Papers, Practice Tests और Answer Review एक ही जगह।</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <h2 class="section-title">📚 RS-CIT Previous Papers</h2>
+    <p class="section-sub">पुराने परीक्षा प्रश्नपत्रों का Online Mock Test दें।</p>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="icon">📄</div>
+        <h2>RS-CIT Previous Paper – 14 December 2025</h2>
+        <p>14-12-2025 का Previous Exam Paper • 35 Questions • Answer Review • Mandatory Answer</p>
+        <a class="btn" href="tests/old-paper-14-12-2025.html">▶ Mock Test शुरू करें</a>
+        <span class="tag">14-12-2025 • Set-B</span>
+      </article>
+
+      <article class="card">
+        <div class="icon">📄</div>
+        <h2>RS-CIT Previous Paper – 30 March 2026</h2>
+        <p>30-03-2026 का Previous Exam Paper • 35 Questions • Online Mock Test</p>
+        <a class="btn" href="tests/old-paper-30-03-2026.html">▶ Mock Test शुरू करें</a>
+        <span class="tag">30-03-2026</span>
+      </article>
+
+      <article class="card">
+        <div class="icon">📝</div>
+        <h2>RS-CIT Main Practice Test</h2>
+        <p>35 Questions • 60 Minutes • Mandatory Answer • Result और Complete Answer Review</p>
+        <a class="btn" href="tests/main-practice-test.html">▶ Practice Test शुरू करें</a>
+        <span class="tag">35 Questions • 60 Minutes</span>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="info">
+    <h2 class="section-title">✅ Test Features</h2>
+    <ul>
+      <li>प्रश्न का उत्तर चुने बिना अगला प्रश्न नहीं खुलेगा।</li>
+      <li>Unanswered प्रश्नों पर आगे Jump नहीं कर सकते।</li>
+      <li>सभी प्रश्न पूरे होने के बाद ही Submit होगा।</li>
+      <li>Timer, Progress Bar, Green Checkmark और Answer Review उपलब्ध हैं।</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <b>Ladsaria Computer Center, Rajaldesar</b><br>
+  RS-CIT Old Papers & Online Mock Tests
+</footer>
+
+</body>
+</html>
